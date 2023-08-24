@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: #fff;
-  color: #fff;
+  /* color: #fff; */
 }
 
 header {
@@ -59,10 +59,16 @@ button {
   background-image: linear-gradient(to right, #ec4899, #8b5cf6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0.6;
 }
 
 #new-task-submit:hover {
   opacity: 0.8;
+}
+
+#new-task-submit .active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 #new-task-submit:active {
@@ -138,4 +144,43 @@ main {
 
 .task .actions .delete {
   color: crimson;
+}
+
+.tasks {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.item {
+  background-color: #111827;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  /* background-color: #111827; */
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.done {
+  color: #8b5cf6;
+}
+
+.add-list.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.item.completed p {
+  text-decoration: line-through;
+  color: #eee9e9;
 }
